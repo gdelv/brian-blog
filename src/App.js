@@ -17,7 +17,7 @@ function App() {
     <div>
       {posts.map(post => (
         <div>
-          <h1>{post.title}</h1>
+          <h1>NEW TITLE</h1>
           <h3>{post.author}</h3>
           <h3>{post.category}</h3>
           <h3>{new Date(post.datePosted.seconds * 1000).toDateString()}</h3>
