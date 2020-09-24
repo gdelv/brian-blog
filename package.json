@@ -2,6 +2,7 @@
   "name": "brian-blog",
   "version": "0.1.0",
   "private": true,
+  "main": "sass/mystyles.scss",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss src/index.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -32,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
   }
 }

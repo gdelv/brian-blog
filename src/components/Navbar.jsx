@@ -1,35 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { Button } from './Button'
+import { Hamburger } from './Hamburger'
 
-export default function Navbar() {
+export const Navbar = () => {
+    const [hamburger, setHamburger] = useState(false)
+    const [hamburgerName, setHamburgerName] = useState('')
+    const changeClassName  = () => {
+        setHamburger(!hamburger)
+        return hamburger ? setHamburgerName('is-active') : setHamburgerName('')
+    }
     return (
-        <div className='flex justify-between min-h-8 bg-gray-700 text-white container p-3 min-w-full'>
-            <div className="logo w-1/4">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+            <div className="navbar-brand">
                 <NavLink 
                         exact to='/' 
-                        className='mr-5 z-10'>
-                            Logo
+                        className='navbar-item'>
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt='logo'/>
                 </NavLink>
+                <Hamburger
+                    hamburgerName={hamburgerName}
+                    changeClassName={changeClassName}
+                />
             </div>
-            <div className="flex w-1/2">
-                {/* page links go here */}
-                <NavLink 
-                    exact to='/' 
-                    className='mr-5 z-10' 
-                    activeClassName='border-b-2'>
-                        Home
-                </NavLink>
-                <NavLink 
-                    exact to='/blog' 
-                    className='mr-5 z-10'
-                    activeClassName='border-b-2'> 
-                        Blog
-                </NavLink>
+
+            <div id="navbarBasicExample" className={`navbar-menu ${hamburgerName}`}>
+                <div className="navbar-start">
+                    <NavLink 
+                            exact to='/' 
+                            className='navbar-item'>
+                            Blog
+                    </NavLink>
+                </div>
+                <div className="navbar-end">
+                    <div className="navbar-item">
+                        <div className="buttons">
+                        <Button
+                            title='Sign In'
+                        />
+                        <Button
+                            title='Get Started'
+                        />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="button-container flex justify-around w-1/5">
-                <button>Log In</button>
-                <button>Sign Up</button>
-            </div>
-        </div>
+        </nav>
     )
 }
