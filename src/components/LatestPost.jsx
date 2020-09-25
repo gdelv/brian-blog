@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Title } from '../components/layout'
 
 export default function LatestPost(props) {
-    const [translate, setTranslate] = useState('-140')
+    const [translate, setTranslate] = useState('-170')
 
     console.log(props);
     return (
@@ -12,7 +12,7 @@ export default function LatestPost(props) {
             <a href="/blog/estimate-arv">
                 <img alt="red haired caucasian woman comparing apples and oranges." title="The Ultimate Guide to Quickly Estimating a Property’s ARV (After Repair Value)" class="b-img-fluid rounded b-promotion__img" src="https://assets2.biggerpockets.com/uploads/wordpress_blog_post/image/7678/homepage_featured_comparing-apples-to-oranges.jpg"/>
             </a>
-            <div class="b-content__info" style={{bottom: `${translate}px`}} onMouseLeave={() => setTranslate('-140')} onMouseEnter={() => setTranslate('0')}>
+            <div class="b-content__info" style={{bottom: `${translate}px`}} onMouseLeave={() => setTranslate('-170')} onMouseEnter={() => setTranslate('0')}>
                 <p>
                     <span class="b-badge"><a href="/blog/category/real-estate-deal-analysis-advice">Real Estate Deal Analysis &amp; Advice</a></span>
                     <time class="b-date" datetime="2020-09-24 14:00:26 -0700" itemprop="datePublished">Sep 24, 2020</time>

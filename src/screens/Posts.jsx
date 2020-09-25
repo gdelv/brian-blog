@@ -26,26 +26,27 @@ const renderPosts = () => {
     if (posts.length) {
         return (
             <>
-                {/* <Flex className='w-full lg:w-2/3 lg:mr-2' style={{height: '44rem'}}>
-                </Flex>
-                <Flex className='flex-col bg-red-500 w-full lg:w-1/3 lg:ml-2' style={{height: '44rem'}}>
-                <PopularPosts posts={popularArr} />
-            </Flex> */}
-<div class="tile is-ancestor px-6 py-6">
-    <div class="tile is-parent">
-            <LatestPost post={posts[0]} />
-    </div>
-    <div class="tile is-parent is-vertical is-4">
-        {popularArr.map(post => {
-            return (
-                <article class="tile is-child box">
-                    {post.author}
-                </article>
-            )
-        })}
-    </div>
-</div>
-
+            <div class="columns is-desktop">
+                {/* <div className="tile is-ancestor"> */}
+                    <div className="column is-8-desktop">
+                        <div class="tile is-parent ">
+                                <LatestPost post={posts[0]} />
+                        </div>
+                </div>
+                <div className="column">
+                    <div class="tile is-parent is-vertical  ">
+                {popularArr.map(post => {
+                    return (
+                        <article class="tile is-child box">
+                            {post.author}
+                        </article>
+                    )
+                })}
+                    </div>
+                </div>
+                {/* </div> */}
+            </div>
+            
             </>
         )
     }
