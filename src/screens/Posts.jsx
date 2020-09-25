@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import firebase from '../firebase'
-// import LatestPost from '../components/LatestPost'
+import './Posts.css'
+import LatestPost from '../components/LatestPost'
 // import PopularPosts from '../components/PopularPosts';
-// import { Flex } from '../components/layout'
 
 export default function Posts() {
 const [posts, setPosts] = useState([])
@@ -27,35 +27,23 @@ const renderPosts = () => {
         return (
             <>
                 {/* <Flex className='w-full lg:w-2/3 lg:mr-2' style={{height: '44rem'}}>
-                    <LatestPost post={posts[0]} />
                 </Flex>
                 <Flex className='flex-col bg-red-500 w-full lg:w-1/3 lg:ml-2' style={{height: '44rem'}}>
-                    <PopularPosts posts={popularArr} />
-                </Flex> */}
-<div class="tile is-ancestor">
+                <PopularPosts posts={popularArr} />
+            </Flex> */}
+<div class="tile is-ancestor px-6 py-6">
     <div class="tile is-parent">
-    <article class="tile is-child box">
-       Put any content you want 
-       this one
-    </article>
-  </div>
-  <div class="tile is-vertical is-4">
-    <div class="tile">
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child box">
-           Put any content you want
-        </article>
-        <article class="tile is-child box">
-           Put any content you want 
-        </article>
-      </div>
+            <LatestPost post={posts[0]} />
     </div>
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-         Put any content you want 
-      </article>
+    <div class="tile is-parent is-vertical is-4">
+        {popularArr.map(post => {
+            return (
+                <article class="tile is-child box">
+                    {post.author}
+                </article>
+            )
+        })}
     </div>
-  </div>
 </div>
 
             </>
