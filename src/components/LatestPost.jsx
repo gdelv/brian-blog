@@ -7,8 +7,8 @@ export default function LatestPost(props) {
     console.log(props);
     return (
         <>
-            <article class="b-promotion tile is-child box">
             <Title title='Newest Post' size={2} className=''/>
+            <article class="b-promotion tile is-child box">
             <a href="/blog/estimate-arv">
                 <img alt="red haired caucasian woman comparing apples and oranges." title="The Ultimate Guide to Quickly Estimating a Property’s ARV (After Repair Value)" class="b-img-fluid rounded b-promotion__img" src="https://assets2.biggerpockets.com/uploads/wordpress_blog_post/image/7678/homepage_featured_comparing-apples-to-oranges.jpg"/>
             </a>

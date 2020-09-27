@@ -13,7 +13,7 @@ import React from 'react'
 
 export const Subtitle = ({ title, className, hAlignment, vAlignment, size, color, transform, style }) => {
     return (
-        <p className={`text-${size} ${className} text-${hAlignment} text-${color} text-${transform} align-${vAlignment}`} style={style}>{title}</p>
+        <h2 className={`subtitle is-${size} ${className} text-${hAlignment} text-${color} text-${transform} align-${vAlignment}`} style={style}>{title}</h2>
     )
 }
 

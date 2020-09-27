@@ -13,6 +13,6 @@ import React from 'react'
 
 export const Title = ({ title, className, hAlignment, vAlignment, size, color, transform, style }) => {
     return (
-        <p className={`text-${size}xl ${className} text-${hAlignment} text-${color} text-${transform} align-${vAlignment}`} style={style}>{title}</p>
+        <h1 className={`title is-${size} ${className} text-${hAlignment} text-${color} text-${transform} align-${vAlignment}`} style={style}>{title}</h1>
     )
 }

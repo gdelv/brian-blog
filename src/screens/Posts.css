@@ -2,13 +2,14 @@
     padding: 2rem 3rem;
     position: absolute;
     display: inline-block;
-    width: 80%;
+    width: 90%;
     left: 0;
     background: #fff;
     transition: .75s ease;
 }
+
 .b-promotion {
-    max-height: 45vh;
+    /* max-height: 45vh; */
     overflow: hidden;
     position: relative;
     border-radius: 3px;
