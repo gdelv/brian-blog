@@ -1,16 +1,19 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 import { Title, Subtitle } from '../components/layout'
 
 export default function LatestPost(props) {
+    const history = useHistory();
 
     console.log(props);
     return (
         <>
             <Title title='Newest Post' size={5} className=''/>
             <article className="b-promotion tile is-child box is-light">
-            <a href="/blog/estimate-arv">
+                {/* LINK TO UPDATE */}
+            <div onClick={() => history.push(`/blog/${props.post.id}`)}>
                 <img alt="red haired caucasian woman comparing apples and oranges." title="The Ultimate Guide to Quickly Estimating a Property’s ARV (After Repair Value)" className="b-img-fluid rounded b-promotion__img" style={{minWidth: '100%'}} src="https://assets2.biggerpockets.com/uploads/wordpress_blog_post/image/7678/homepage_featured_comparing-apples-to-oranges.jpg"/>
-            </a>
+            </div>
             <div className="b-content__info">
             <div className='is-flex' style={{justifyContent: 'space-between'}}>
                 <Subtitle title={props.post.category} style={{fontSize: '.8rem', padding: '.25em'}}/>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import firebase from '../firebase'
 // import './Posts.css'
 import LatestPost from '../components/LatestPost'
@@ -7,7 +8,7 @@ import { Subtitle, Title } from '../components/layout'
 
 export default function Posts() {
 const [posts, setPosts] = useState([])
-
+const history = useHistory()
 useEffect(() => {
     const fetchData = async () => {
         const db = firebase.firestore()
@@ -39,7 +40,8 @@ const renderPosts = () => {
                                 return (
                                     <article class="tile is-child box notification is-light">
                                     <div className="columns is-mobile">
-                                        <div className="column is-4 has-text-centered">   
+                                        <div className="column is-4 has-text-centered" onClick={() => history.push(`/blog/${post.id}`)}> 
+                                          {/* WRAP LINK HERE */}
                                             <figure class="image is-128x128">
                                                 <img src="https://bulma.io/images/placeholders/128x128.png" alt='random' />
                                             </figure>
