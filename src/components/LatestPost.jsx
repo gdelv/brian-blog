@@ -20,7 +20,7 @@ export default function LatestPost(props) {
                 <Subtitle title={new Date(props.post.datePosted).toDateString()} style={{fontSize: '.8rem'}}/>
             </div>
                 <div className="b-promotion__blog-hero">
-                    <h3 itemprop="name headline" style={{fontSize:'1.1em'}} ><a className="b-blog-link" href="/blog/estimate-arv">{props.post.title}</a></h3>
+                    <h3 itemprop="name headline" style={{fontSize:'1.1em'}} onClick={() => history.push(`/blog/${props.post.id}`)}>{props.post.title}</h3>
                     <div className='is-flex' style={{alignItems: 'center', justifyContent:'flex-start', paddingTop: '.5em'}}>
                         <figure class="image is-48x48">
                             <img src={props.post.authorImg} alt="Placeholder" className='is-rounded'/>
