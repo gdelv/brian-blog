@@ -1,8 +1,10 @@
 .b-content__info {
     padding: 2rem 3rem;
     position: absolute;
+    /* position: relative; */
     display: inline-block;
-    width: 90%;
+    width: 100%;
+    bottom: -130px;
     left: 0;
     background: #fff;
     transition: .75s ease;
@@ -38,6 +40,32 @@
 .b-content__info h3 {
     font-size: 1.5em;
 }
+@media only screen and (max-width: 1024px) {
+    .b-content__info h3 {
+      font-size: 1.2em;
+    }
+    .b-content__info {
+        padding: 2rem;
+    }
+  }
+  @media only screen and (max-width: 565px) {
+    .b-content__info h3 {
+      font-size: 1em;
+    }
+    .b-content__info {
+        padding: 2rem;
+        bottom: -190px;
+    }
+  }
+  @media only screen and (max-width: 412px) {
+    .b-content__info h3 {
+      font-size: .9em;
+    }
+    .b-content__info {
+        padding: 2rem;
+        bottom: -220px;
+    }
+  }
 .b-blog-link {
     color: #34414d;
 }
