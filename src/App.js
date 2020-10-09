@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Footer from './components/Footer';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar';
 import { Routes } from './routes';
 import styled from 'styled-components';
 import { Gray } from './colors';
