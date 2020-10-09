@@ -1,17 +1,26 @@
 import React from 'react';
 import './App.css';
-import {Navbar} from './components/Navbar';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 import { Routes } from './routes';
+import styled from 'styled-components';
+import { Gray } from './colors';
 
 function App() {
+  const MainContainer = styled.main`
+    background:${Gray} 
+  `
   return (
     <>
       <header>
-        <Navbar/>
+        <NavBar/>
       </header>
-      <main>
+      <MainContainer>
         <Routes/>
-      </main>
+      </MainContainer>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }
